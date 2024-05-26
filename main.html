@@ -125,12 +125,12 @@
             event.preventDefault();
             const ingredientsInput = document.getElementById('ingredients').value.split(',').map(item => item.trim().toLowerCase());
 
-            // Function to check if a recipe's ingredients are all in the provided ingredients list
+            // <------------Function to check if a recipe's ingredients are all in the provided ingredients list------>
             function recipeMatches(recipeIngredients, ingredients) {
                 return recipeIngredients.every(ingredient => ingredients.includes(ingredient.toLowerCase()));
             }
 
-            // Recursive function to find matching recipes
+            // <------Recursive function to find matching recipes----->
             function findRecipes(recipes, ingredients, matched = []) {
                 if (recipes.length === 0) return matched;
                 const [currentRecipe, ...rest] = recipes;
